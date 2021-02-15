@@ -1,0 +1,20 @@
+@import "import/main";
+
+body{
+    .formFinHeader{
+        clip-path: polygon(100% 100%, 0 0, 100% 0);
+        -webkit-clip-path: polygon(100% 100%, 0 0, 100% 0);
+        background-color: $primary;
+        height: 200px;
+    }
+    .formFinHeaderBas{
+        clip-path: polygon(0 0, 0% 100%, 100% 100%);
+        -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
+        background-color: $primary;
+        height: 200px;
+    }
+    .containerFormHeader{
+        position: relative;
+        background-color: $secondary;
+    }
+}
