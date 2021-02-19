@@ -2,13 +2,13 @@ function domReady() {
     fetch('http://localhost:3000/api/cameras')
         .then(response => response.json())
         .then(response => {
-            console.log(response)
             populateTableList(response);
 
         })
         .catch(error => alert(error));
 }
 document.addEventListener('DOMContentLoaded', domReady);
+
 
 function populateTableList(response) {
     let listOfProducts = '';
