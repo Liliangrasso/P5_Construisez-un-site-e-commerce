@@ -9982,9 +9982,6 @@ body main .card .card-footer .cardBottum:hover {
 body main .card .card-footer .cardBottum .fa-heart:hover {
   color: #dc3545;
 }
-body main .card .card-footer .cardBottum .fa-plus-circle:hover {
-  color: #17a2b8;
-}
 body main .card .card-footer .cardBottum .fa-shopping-cart:hover {
   color: #ffc107;
 }
@@ -10022,5 +10019,49 @@ body footer span {
     padding-bottom: 0 !important;
   }
 }
+.dropdown:hover > #cart-dropdown {
+  display: block;
+}
 
-/*# sourceMappingURL=_main.css.map */
+.dropdown {
+  color: white;
+}
+
+.btn-danger {
+  color: white;
+  background-color: #EB5757;
+  border: none;
+  border-radius: 0.3em;
+  font-weight: bold;
+}
+
+.btn-danger:hover {
+  background-color: #CC4C4C;
+}
+
+.cart-total {
+  text-align: end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.cart-total-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: black;
+  margin-right: 10px;
+}
+
+.affichageTotalPrice {
+  color: #333;
+  font-size: 1.1em;
+  margin-top: 4px;
+}
+
+.btn-purchase {
+  display: block;
+  margin: 40px auto 20px auto;
+  font-size: 1.75em;
+}
+
+/*# sourceMappingURL=panier.css.map */

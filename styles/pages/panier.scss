@@ -1,0 +1,46 @@
+@import "../import/main";
+
+.dropdown:hover > #cart-dropdown{
+    display: block;
+}
+
+.dropdown{
+    color: white;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 10px;
+}
+
+.affichageTotalPrice {
+    color: #333;
+    font-size: 1.1em;
+    margin-top: 4px;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 20px auto;
+    font-size: 1.75em;
+}

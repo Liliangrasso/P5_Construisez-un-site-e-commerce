@@ -31,9 +31,6 @@ function populateTableList(response) {
             </div>            
             <div class="card-footer">
                 <div class=" row justify-content-center">
-                    <a href="#" class="card-link btn btn-md cardBottum">
-                        <span class="fa fa-shopping-cart fa-lg"></span>
-                    </a>
                     <a href="./pages/produit.html?id=${items._id}" class="card-link btn btn-md cardBottum">
                         <span class="fa fa-plus-circle fa-lg"></span>
                     </a>

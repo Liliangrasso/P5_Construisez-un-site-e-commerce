@@ -11,7 +11,10 @@ fetch('http://localhost:3000/api/cameras/' + id)
 
 
 function populateProduct(response) {
-
+    let lentilles = ""
+    response.lenses.forEach(element => {
+        lentilles += `<option>${element}</option>`
+    });
     const product = `
         <div class="text-center card mt-3">
             <img src=${response.imageUrl} class="img-fluid card-img-top">
@@ -29,15 +32,25 @@ function populateProduct(response) {
             </div>            
             <div class="card-footer">
                 <div class=" row justify-content-center">
-                    <a href="#" class="card-link btn btn-md cardBottum">
+                    <label for="option">Lentilles: </label>
+                    <select id="option" name="option">
+                    ${lentilles}
+                    </select>
+                    <a href="#" class="card-link btn btn-md cardBottum add-to-cart" id="panierLink">
                         <span class="fa fa-shopping-cart fa-lg"></span>
-                    </a>
-                    <a href="#" class="card-link btn btn-md cardBottum">
-                        <span class="fa fa-heart fa-lg"></span>
                     </a>
                 </div>
             </div>
         </div>
       ` 
     document.getElementById('product').innerHTML = product;
+    document.getElementById('panierLink').addEventListener("click", () => {
+        if (localStorage.getItem("panier")) {
+            const panier = JSON.parse(localStorage.getItem('panier'))
+            panier.push(response)
+            localStorage.setItem("panier", JSON.stringify(panier))
+        } else {
+            localStorage.setItem("panier", JSON.stringify([response]))
+        }
+    })
 }

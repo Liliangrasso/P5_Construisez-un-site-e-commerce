@@ -57,6 +57,11 @@ body{
                             color: $danger;
                         }
                     }
+                    .fa-plus-circle{
+                        &:hover{
+                            color: $info;
+                        }
+                    }
                     .fa-shopping-cart{
                         &:hover{
                             color: $warning;

@@ -9982,6 +9982,9 @@ body main .card .card-footer .cardBottum:hover {
 body main .card .card-footer .cardBottum .fa-heart:hover {
   color: #dc3545;
 }
+body main .card .card-footer .cardBottum .fa-plus-circle:hover {
+  color: #17a2b8;
+}
 body main .card .card-footer .cardBottum .fa-shopping-cart:hover {
   color: #ffc107;
 }
