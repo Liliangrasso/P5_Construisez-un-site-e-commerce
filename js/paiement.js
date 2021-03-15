@@ -120,8 +120,8 @@ const affichangeFormulaire = () => {
                                                 </div>
                                             </div>
                                             <div class="card-footer">
-                                                <button id='buyValidation' class="btn btn-sm btn-success float-right" type="submit">
-                                                    <i class="mdi mdi-gamepad-circle"></i> Continue</button>
+                                                <a href="commande.html"><button id='buyValidation' class="btn btn-sm btn-success float-right" type="submit">
+                                                    <i class="mdi mdi-gamepad-circle"></i> Continue</button></a>
                                                 <button class="btn btn-sm btn-danger" type="reset">
                                                     <i class="fas fa-trash-alt"></i></button>
                                             </div>
@@ -146,7 +146,6 @@ const affichangeFormulaire = () => {
             pays: document.getElementById("inputState").value,
             zip: document.getElementById("inputZip").value     
         }
-        localStorage.setItem("informationLivraison", JSON.stringify(informationLivraison))
         //Cartes Bancaires
         const informationPaiement = {
             name: document.getElementById("name").value,
@@ -155,18 +154,28 @@ const affichangeFormulaire = () => {
             ccyear: document.getElementById("ccyear").selectedIndex,
             cvv: document.getElementById("cvv").value
         }
-        localStorage.setItem("informationPaiement", JSON.stringify(informationPaiement))
 
-
-       // Envoie au serveur
+       // Rassemblement des infos
         const formulaireDePaiement ={
             informationLivraison,
             informationPaiement
         }
-        console.log(formulaireDePaiement)
+        // Création de la commande
+            let idCommandes = () => {
+                return Math.floor((1 + Math.random()) * 0x10000)
+                    .toString(16)
+                    .substring(1);
+            }
+            let panier = localStorage.getItem("panier");
+            let commandes = {
+                id: idCommandes(),
+                itemsPanier: panier,
+                info: formulaireDePaiement
+            }
+        localStorage.setItem("commandes", JSON.stringify(commandes))
+        console.log("votre commande " + commandes.id)
     })
 
 };
-
 
 
