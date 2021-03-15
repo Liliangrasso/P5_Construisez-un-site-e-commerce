@@ -81,3 +81,4 @@ function populatePanier(panier) {
     document.getElementById('totalCard').innerHTML = affichageTotalPrice;
 
 }
+
