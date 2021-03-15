@@ -46,8 +46,10 @@
             <h2>Vente de cameras vintage</h2>
         </div>
     </header>
-    <main class="container text-center">
-        <h2 class="mt-4">Vôtre panier</h2>
+    <main class="container">
+        <h2 class="mt-4 text-center">Vôtre panier</h2>
+        <button type="button" id="delete-card" class="justify-content-center btn btn-danger mb-2">
+            <i class="fas fa-trash-alt mr-2 text-right"></i>Vider le panier</button>
         <div class="row justify-content-center">
             <div class="col-12 col-lg-4">
                 <div class="col">
@@ -60,12 +62,18 @@
                         </tbody>
                     </table>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
                 <div class="cart-total d-flex justify-content-center flex-wrap">
                     <p class="cart-total-title h3">Votre total est de :</p>
                     <span id="totalCard" class="d-flex align-baseline ml-0 affichageTotalPrice h5">0€</span>
                 </div>
-                <button class="btn btn-secondary btn-purchase" type="button">Acheter</button>
-                <button type="button" id="delete-card" class="btn btn-danger mb-2">Vider le panier</button>
+                <button class="btn btn-secondary btn-purchase " id="buyButton" type="button">Paiement</button>
+                <div id="buy" class="container">
+
+                </div>
             </div>
         </div>
     </main>
@@ -109,9 +117,6 @@
                         <span class="fab fa-instagram"></span>
                     </a>
                     <a href="#" class="card-link btn btn-md cardBottum mt-2">
-                        <span class="fab fa-facebook-f"></span>
-                    </a>
-                    <a href="#" class="card-link btn btn-md cardBottum mt-2">
                         <span class="fab fa-twitter"></span>
                     </a>
                 </div>
@@ -131,6 +136,7 @@
     </footer>
         <!-- Code javaScript -->
         <script src="../js/panier.js"></script>
+        <script src="../js/paiement.js"></script>
 </body>
 
 </html>
