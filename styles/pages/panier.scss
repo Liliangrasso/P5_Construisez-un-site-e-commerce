@@ -44,3 +44,17 @@
     margin: 40px auto 20px auto;
     font-size: 1.75em;
 }
+
+// PopUp de Paiement
+
+#buy{
+    min-width: 80%;
+    opacity: 0;
+    p{
+        color: white;
+        text-align: left;
+    }
+    input, select{
+        border: 1px solid $secondary;
+    }
+}

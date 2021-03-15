@@ -9982,6 +9982,9 @@ body main .card .card-footer .cardBottum:hover {
 body main .card .card-footer .cardBottum .fa-heart:hover {
   color: #dc3545;
 }
+body main .card .card-footer .cardBottum .fa-plus-circle:hover {
+  color: #17a2b8;
+}
 body main .card .card-footer .cardBottum .fa-shopping-cart:hover {
   color: #ffc107;
 }
@@ -10062,6 +10065,18 @@ body footer span {
   display: block;
   margin: 40px auto 20px auto;
   font-size: 1.75em;
+}
+
+#buy {
+  min-width: 80%;
+  opacity: 0;
+}
+#buy p {
+  color: white;
+  text-align: left;
+}
+#buy input, #buy select {
+  border: 1px solid #232323;
 }
 
 /*# sourceMappingURL=panier.css.map */
