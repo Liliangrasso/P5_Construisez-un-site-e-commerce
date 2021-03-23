@@ -52,7 +52,7 @@ function populatePanier(panier) {
                     <p class="font-weight-bold">${items.price}€</p>
                 </div>
                 <hr class="text-secondary" aria-hidden="true">
-                <button type="button" class="btn btn-danger delete-items mt-5 btn-lg" data-id="${index}">Supprimer l'article</button>
+                <button type="button" class="btn btn-danger delete-items mb-1" data-id="${index}">Supprimer l'article</button>
             </div>
         </div>
       `   )

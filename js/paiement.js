@@ -12,10 +12,10 @@ document.getElementById('buyButton').addEventListener("click", () => {
 
 const affichangeFormulaire = () => {
     const structureFormulaire = `
-                    <div class="row">
+                    <div class="row containerFormulaire">
                         <div class="col">
                             <form class="buyForm">
-                                <h2 class="mt-4 mb-4 text-center">Informations de livraison</h2>
+                                <h2 class="mt-4 mb-4 mr-2 text-center"><span class="mt-4"><i class="fas fa-truck mr-2"></i></span>Informations de livraison</h2>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputEmail">Email</label>
@@ -50,10 +50,10 @@ const affichangeFormulaire = () => {
                                 </div>
                                 <div class="form-row justify-content-center">
                                     <div class="form-group col-md-6">
-                                        <h2 class="mt-4 mb-4 text-center">Paiement</h2>
+                                        <h2 class="mt-4 mb-4 mr-2 text-center"><span class="mt-4"><i class="fas fa-money-check mr-2"></i></span>Paiement</h2>
                                         <div class="bg-white">
                                             <div class="card-header">
-                                                <strong>Credit Card</strong>
+                                                <strong>Carte de credit</strong>
                                                 <small>Entrez vos informations de paiement</small>
                                             </div>
                                             <div class="card-body">
@@ -73,7 +73,7 @@ const affichangeFormulaire = () => {
                                                                 <input id="ccnumber" class="form-control" type="text" placeholder="0000 0000 0000 0000" autocomplete="email">
                                                                 <div class="input-group-append">
                                                                     <span class="input-group-text">
-                                                                        <i class="mdi mdi-credit-card"></i>
+                                                                        <i class="fas fa-credit-card"></i>
                                                                     </span>
                                                                 </div>
                                                             </div>
