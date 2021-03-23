@@ -9941,7 +9941,7 @@ body .fixed-nav {
 body h2, body h1, body h5 {
   font-family: "Fredoka One", cursive;
 }
-body p, body li, body a {
+body p, body li {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
@@ -9952,17 +9952,11 @@ body header img {
   height: 150px;
   width: 150px;
 }
-body main a {
-  color: #232323;
-  text-decoration: none;
+body main .card {
+  border-radius: 13%;
 }
-body main a:hover {
-  color: #232323;
-  text-decoration: none;
-}
-body main .card:hover {
-  box-shadow: 0px 1px 20px 1px;
-  transition: ease-in;
+body main .card img {
+  border-radius: 13% 13% 0 0;
 }
 body main .card .card-body {
   padding: 0;
@@ -10026,15 +10020,10 @@ body footer span {
     padding-bottom: 0;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
   body {
     padding-bottom: 0 !important;
   }
-  body table tbody {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-  }
 }
 
-/*# sourceMappingURL=_main.css.map */
+/*# sourceMappingURL=commande.css.map */
