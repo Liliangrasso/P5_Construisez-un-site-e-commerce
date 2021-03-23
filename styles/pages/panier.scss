@@ -45,7 +45,7 @@
     font-size: 1.75em;
 }
 
-// PopUp de Paiement
+// Paiement
 
 #buy{
     min-width: 80%;
@@ -58,3 +58,11 @@
         border: 1px solid $secondary;
     }
 }
+
+// Produit
+        .productContainer{
+            box-shadow: 5px 3px 3px 0px rgb(0 0 0 / 40%);
+            .productImg{
+                padding: unset;
+            }
+        }

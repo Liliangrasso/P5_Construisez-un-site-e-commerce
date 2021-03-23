@@ -16,8 +16,8 @@ function populateProduct(response) {
         lentilles += `<option>${element}</option>`
     });
     const product = `
-        <div class="row">
-            <div class="product-img col-lg-7">
+        <div class="row productContainer">
+            <div class="productImg col-lg-7">
                 <img src=${response.imageUrl} alt="image du produit" class="img-fluid">
             </div>
             <div class="product-description col-lg-4">
@@ -39,7 +39,7 @@ function populateProduct(response) {
                 </div>
                 <div class="productPrice">
                     <hr class="text-secondary" aria-hidden="true">
-                    <p class="font-weight-bold">${response.price}€</p>
+                    <p class="font-weight-bold">Prix : ${response.price}€</p>
                 </div>
                 <hr class="text-secondary" aria-hidden="true">
                 <button type="button" class="btn btn-lg btn-secondary mt-5" id="panierLink">Ajouter au panier</button>
@@ -52,6 +52,7 @@ function populateProduct(response) {
             const panier = JSON.parse(localStorage.getItem('panier'))
             panier.push(response)
             localStorage.setItem("panier", JSON.stringify(panier))
+            alert("Article ajouter au panier !")
         } else {
             localStorage.setItem("panier", JSON.stringify([response]))
         }

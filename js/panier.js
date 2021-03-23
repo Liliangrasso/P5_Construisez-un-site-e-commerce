@@ -24,24 +24,35 @@ document.addEventListener('DOMContentLoaded', domReady);
 
 
 function populatePanier(panier) {
+ 
     let listOfPanier = '';
 
     panier.forEach((items, index) =>
         listOfPanier += `
-        <div class="text-center card mt-3">
-            <img src=${items.imageUrl} class="img-fluid card-img-top">
-            <div class="card-body ">
-                <h5 class="card-title bg-secondary text-center">${items.name}</h5>
-                <div class="containerRating mt-3 mb-2 ml-3">
-                    <p>${panier.lenses}</p>
+        <div class="row mt-4 productContainer">
+            <div class="productImg col-lg-7">
+                <img src=${items.imageUrl} alt="image du produit" class="img-fluid">
+            </div>
+            <div class="product-description col-lg-4">
+                <div class="productTitle">
+                    <h1>${items.name}</h1>
                 </div>
-                <p class="text-center card-text mt-2">${items.description}</p>
-                <p class="font-weight-bold text-center " id="price">${items.price}€</p>
-            </div>            
-            <div class="card-footer">
-                <div class=" row justify-content-center">
-                    <button type="button" class="btn btn-danger delete-items" data-id="${index}">Supprimer l'article</button>
+                <div class="productInfo">
+                    <div class="description">
+                    <hr class="text-secondary" aria-hidden="true">
+                        <p>${items.description}</p>
+                    </div>
                 </div>
+                <div class="productCustom">
+                <hr class="text-secondary" aria-hidden="true">
+                <p>Vôtre lentille<p>
+                </div>
+                <div class="productPrice">
+                    <hr class="text-secondary" aria-hidden="true">
+                    <p class="font-weight-bold">${items.price}€</p>
+                </div>
+                <hr class="text-secondary" aria-hidden="true">
+                <button type="button" class="btn btn-danger delete-items mt-5 btn-lg" data-id="${index}">Supprimer l'article</button>
             </div>
         </div>
       `   )
@@ -51,10 +62,8 @@ function populatePanier(panier) {
         localStorage.clear();
         location.reload();
     });
-
     // Suppression d'un items du panier //
     const buttons = document.getElementsByClassName('delete-items')
-    console.log(buttons)
         Array.prototype.forEach.call(buttons, button => {
             button.addEventListener("click", (e) => {
                 const panier = JSON.parse(localStorage.getItem('panier'))
