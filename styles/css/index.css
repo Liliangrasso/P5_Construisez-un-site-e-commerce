@@ -9941,7 +9941,7 @@ body .fixed-nav {
 body h2, body h1, body h5 {
   font-family: "Fredoka One", cursive;
 }
-body p, body li {
+body p, body li, body a {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
@@ -9952,11 +9952,17 @@ body header img {
   height: 150px;
   width: 150px;
 }
-body main .card {
-  border-radius: 13%;
+body main a {
+  color: #232323;
+  text-decoration: none;
 }
-body main .card img {
-  border-radius: 13% 13% 0 0;
+body main a:hover {
+  color: #232323;
+  text-decoration: none;
+}
+body main .card:hover {
+  box-shadow: 0px 1px 20px 1px;
+  transition: ease-in;
 }
 body main .card .card-body {
   padding: 0;
@@ -9988,6 +9994,9 @@ body main .card .card-footer .cardBottum .fa-plus-circle:hover {
 body main .card .card-footer .cardBottum .fa-shopping-cart:hover {
   color: #ffc107;
 }
+body .blockquote {
+  border-left: 5px solid #cac0b7;
+}
 body footer span {
   font-size: 2rem;
 }
@@ -10017,9 +10026,14 @@ body footer span {
     padding-bottom: 0;
   }
 }
-@media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+@media (min-width: 1024px) {
   body {
     padding-bottom: 0 !important;
+  }
+  body table tbody {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
   }
 }
 body .formFinHeader {
@@ -10037,6 +10051,30 @@ body .formFinHeaderBas {
 body .containerFormHeader {
   position: relative;
   background-color: #232323;
+}
+body main .card {
+  height: 100%;
+}
+body main .card:hover {
+  background-color: rgba(35, 35, 35, 0.9);
+  height: 100%;
+  width: 100%;
+}
+body main .card:hover::after {
+  content: "+";
+  font-size: 38px;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 75%;
+  color: white;
+  display: block;
+}
+body main .card .card-top {
+  min-height: 100%;
+}
+body main .card .card-top img {
+  min-height: 100%;
 }
 
 /*# sourceMappingURL=index.css.map */

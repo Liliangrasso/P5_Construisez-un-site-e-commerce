@@ -16,30 +16,33 @@ function populateProduct(response) {
         lentilles += `<option>${element}</option>`
     });
     const product = `
-        <div class="text-center card mt-3">
-            <img src=${response.imageUrl} class="img-fluid card-img-top">
-            <div class="card-body ">
-                <h5 class="card-title bg-secondary text-center">${response.name}</h5>
-                <div class="containerRating mt-3 mb-2 ml-3">
-                    <span class="fa fa-star text-warning"></span>
-                    <span class="fa fa-star text-warning"></span>
-                    <span class="fa fa-star text-warning"></span>
-                    <span class="fa fa-star text-warning"></span>
-                    <span class="fa fa-star-o"></span>
+        <div class="row">
+            <div class="product-img col-lg-7">
+                <img src=${response.imageUrl} class="img-fluid">
+            </div>
+            <div class="product-description col-lg-4">
+                <div class="productTitle">
+                    <h1>${response.name}</h1>
                 </div>
-                <p class="text-center card-text mt-2">${response.description}</p>
-                <p class="font-weight-bold text-center ">${response.price}€</p>
-            </div>            
-            <div class="card-footer">
-                <div class=" row justify-content-center">
-                    <label for="option">Lentilles: </label>
+                <div class="productInfo">
+                    <div class="description">
+                    <hr class="text-secondary" aria-hidden="true">
+                        <p>${response.description}</p>
+                    </div>
+                </div>
+                <div class="productCustom">
+                <hr class="text-secondary" aria-hidden="true">
+                    <label for="option">Lentilles : </label>
                     <select id="option" name="option">
-                    ${lentilles}
+                        ${lentilles}
                     </select>
-                    <a href="#" class="card-link btn btn-md cardBottum add-to-cart" id="panierLink">
-                        <span class="fa fa-shopping-cart fa-lg"></span>
-                    </a>
                 </div>
+                <div class="productPrice">
+                    <hr class="text-secondary" aria-hidden="true">
+                    <p class="font-weight-bold">${response.price}€</p>
+                </div>
+                <hr class="text-secondary" aria-hidden="true">
+                <button type="button" class="btn btn-lg btn-secondary mt-5" id="panierLink">Ajouter au panier</button>
             </div>
         </div>
       ` 

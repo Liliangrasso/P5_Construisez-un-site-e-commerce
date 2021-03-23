@@ -121,7 +121,7 @@ const affichangeFormulaire = () => {
                                             </div>
                                             <div class="card-footer">
                                                 <a href="commande.html"><button id='buyValidation' class="btn btn-sm btn-success float-right" type="submit">
-                                                    <i class="mdi mdi-gamepad-circle"></i> Continue</button></a>
+                                                    <i class="mdi mdi-gamepad-circle"></i> Validez la commande</button></a>
                                                 <button class="btn btn-sm btn-danger" type="reset">
                                                     <i class="fas fa-trash-alt"></i></button>
                                             </div>
@@ -150,8 +150,8 @@ const affichangeFormulaire = () => {
         const informationPaiement = {
             name: document.getElementById("name").value,
             ccnumber: document.getElementById("ccnumber").value,
-            ccmonth: document.getElementById("ccmonth").selectedIndex,
-            ccyear: document.getElementById("ccyear").selectedIndex,
+            ccmonth: document.getElementById("ccmonth").value,
+            ccyear: document.getElementById("ccyear").value,
             cvv: document.getElementById("cvv").value
         }
 
