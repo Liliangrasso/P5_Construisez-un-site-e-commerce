@@ -18,7 +18,7 @@ function populateProduct(response) {
     const product = `
         <div class="row">
             <div class="product-img col-lg-7">
-                <img src=${response.imageUrl} class="img-fluid">
+                <img src=${response.imageUrl} alt="image du produit" class="img-fluid">
             </div>
             <div class="product-description col-lg-4">
                 <div class="productTitle">
