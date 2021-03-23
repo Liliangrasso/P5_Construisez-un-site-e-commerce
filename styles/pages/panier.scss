@@ -55,7 +55,7 @@
         text-align: left;
     }
     input, select{
-        border: 1px solid $secondary;
+        border: 1px solid rgb(0 0 0 / 20%);
     }
 }
 
@@ -65,4 +65,9 @@
             .productImg{
                 padding: unset;
             }
+        }
+        
+// Formulaire
+        .containerFormulaire{
+            box-shadow: 3px 3px 3px 3px rgb(0 0 0 / 20%);
         }
