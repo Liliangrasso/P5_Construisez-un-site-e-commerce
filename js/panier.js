@@ -45,7 +45,7 @@ function populatePanier(panier) {
                 </div>
                 <div class="productCustom">
                 <hr class="text-secondary" aria-hidden="true">
-                <p>Vôtre lentille<p>
+                <p>${items.lenses}<p>
                 </div>
                 <div class="productPrice">
                     <hr class="text-secondary" aria-hidden="true">
@@ -88,6 +88,7 @@ function populatePanier(panier) {
     ${totalPrice}€
     </span>`
     document.getElementById('totalCard').innerHTML = affichageTotalPrice;
+
 
 }
 

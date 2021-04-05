@@ -13,7 +13,7 @@ fetch('http://localhost:3000/api/cameras/' + id)
 function populateProduct(response) {
     let lentilles = ""
     response.lenses.forEach(element => {
-        lentilles += `<option>${element}</option>`
+        lentilles += `<option >${element}</option>`
     });
     const product = `
         <div class="row productContainer">
@@ -48,6 +48,9 @@ function populateProduct(response) {
       ` 
     document.getElementById('product').innerHTML = product;
     document.getElementById('panierLink').addEventListener("click", () => {
+        let lentillesSelected = document.getElementById("option").value
+        response.lenses = lentillesSelected
+        console.log(lentillesSelected)
         if (localStorage.getItem("panier")) {
             const panier = JSON.parse(localStorage.getItem('panier'))
             panier.push(response)
