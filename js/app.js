@@ -20,11 +20,10 @@ function populateTableList(response) {
         <div class="text-center card">
             <img src=${items.imageUrl} class="img-fluid card-img-top">
             <div class="card-body ">
-                <h5 class="card-title bg-secondary text-center">${items.name}</h5>
+                <h5 class="card-title bg-secondary text-center h3">${items.name}</h5>
                 <p class="text-center card-text mt-2">${items.description}</p>
                 <p class="font-weight-bold text-center ">${items.price}€</p>
             </div>            
-
         </div>
         </a>
     </div>

@@ -10056,5 +10056,8 @@ body main .card .card-top {
 body main .card .card-top img {
   min-height: 100%;
 }
+body main .card .card-body h5 {
+  color: white;
+}
 
 /*# sourceMappingURL=index.css.map */
